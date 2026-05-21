@@ -172,7 +172,7 @@ const getUserInfo = () => {
   const handleBudgetSave = async () => {
   try {
     await axios.put(
-      "https://moneywise-6v9a.onrender.com/api/expenses",
+      "https://moneywise-6v9a.onrender.com/api/budget",
       { budget },
       {
         headers: {

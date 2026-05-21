@@ -37,12 +37,12 @@ function Stats() {
        }
       );
 
-      console.log("Expenses response:", res.data);
-      console.log(Array.isArray(res.data));
+    
 
       setExpenses(Array.isArray(res.data) ? res.data : []);
     } catch (error) {
       console.log(error);
+      setExpenses([]);
     }
   };
 

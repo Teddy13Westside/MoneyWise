@@ -14,7 +14,7 @@ function DailyView() {
 
   const fetchExpenses = async () => {
     try {
-      const res = await axios.get("https://moneywise-6v9a.onrender.com", {
+      const res = await axios.get("https://moneywise-6v9a.onrender.com/api/expenses", {
         headers: {
           Authorization: `Bearer ${userInfo?.token}`,
         },

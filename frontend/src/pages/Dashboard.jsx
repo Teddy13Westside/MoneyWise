@@ -47,7 +47,7 @@ const getUserInfo = () => {
   const fetchExpenses = async () => {
   try {
 
-    const res = await axios.get("https://moneywise-6v9a.onrender.com", {
+    const res = await axios.get("https://moneywise-6v9a.onrender.com/api/expenses", {
       headers: {
         Authorization: `Bearer ${getToken()}`, 
       },
@@ -61,7 +61,7 @@ const getUserInfo = () => {
 
   const fetchBudget = async () => {
   try {
-    const res = await axios.get("https://moneywise-6v9a.onrender.com", {
+    const res = await axios.get("https://moneywise-6v9a.onrender.com/api/budget", {
       headers: {
         Authorization: `Bearer ${getToken()}`, 
       },
@@ -87,7 +87,7 @@ const getUserInfo = () => {
 
 
     await axios.post(
-      "https://moneywise-6v9a.onrender.com",
+      "https://moneywise-6v9a.onrender.com/api/expenses",
       formData,
       {
         headers: {
@@ -126,7 +126,7 @@ const getUserInfo = () => {
 
   try {
     await axios.put(
-      `https://moneywise-6v9a.onrender.com/${editId}`,
+      `https://moneywise-6v9a.onrender.com/api/expenses/${editId}`,
       formData,
       {
         headers: {
@@ -152,7 +152,7 @@ const getUserInfo = () => {
 
   const deleteExpense = async (id) => {
     try {
-      await axios.delete(`https://moneywise-6v9a.onrender.com/${id}`, {
+      await axios.delete(`https://moneywise-6v9a.onrender.com/api/expenses/${id}`, {
         headers: {
           Authorization: `Bearer ${getToken()}`, 
         },
@@ -172,7 +172,7 @@ const getUserInfo = () => {
   const handleBudgetSave = async () => {
   try {
     await axios.put(
-      "https://moneywise-6v9a.onrender.com",
+      "https://moneywise-6v9a.onrender.com/api/expenses",
       { budget },
       {
         headers: {

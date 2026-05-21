@@ -28,11 +28,14 @@ function Stats() {
 
   const fetchExpenses = async () => {
     try {
-      const res = await axios.get("https://moneywise-6v9a.onrender.com", {
-        headers: {
-          Authorization: `Bearer ${userInfo?.token}`,
-        },
-      });
+      const res = await axios.get(
+        "https://moneywise-6v9a.onrender.com/api/expenses",
+        {
+          headers: {
+            Authorization: `Bearer ${userInfo?.token}`,
+          },
+       }
+      );
 
       console.log("Expenses response:", res.data);
       console.log(Array.isArray(res.data));
